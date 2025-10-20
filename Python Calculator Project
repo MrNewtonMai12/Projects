@@ -1,0 +1,52 @@
+def add(x,y):
+    return x + y
+
+def subtract(x,y):
+    return x - y
+
+def multiply(x,y):
+    return x * y
+
+def divide(x,y):
+    return x / y
+
+      ### Declared and defined functions###
+
+choice = input('Enter Choice: ("+","-","*","/"): ')
+
+num1 = float(input ('Enter First Number: '))
+
+num2 = float(input ('Enter Second Number: '))
+
+      ### declared inputs for user ###
+
+
+while True:
+    choice = input('Enter Choice: ("+","-","*","/"): ')
+    
+    if choice in ("+","-","*","/"):
+        num1 = float(input ('Enter First Number: '))
+        num2 = float(input ('Enter Second Number: '))
+    
+        if choice in ("+"):
+            print('Result:', num1, '+', num2, '=', add(num1,num2))
+    
+        elif choice in ("-"):
+            print('Result:',num1, '-', num2, '=', subtract(num1,num2))
+    
+        elif choice in ("*"):
+            print('Result:',num1, '*', num2, '=', multiply(num1,num2))
+    
+        elif choice in ("/"):
+            print('Result:',num1, '/', num2, '=', divide(num1,num2))
+    
+    else:
+        print('Please input one of the 4 choices: "+","-","*","/"')
+        
+    next_calculation = input("Would you like to do another calculation? (yes/no): ")
+    if next_calculation.lower() in ('no'):
+        break
+
+
+
+
